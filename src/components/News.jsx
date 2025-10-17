@@ -5,9 +5,6 @@ import PropTypes from 'prop-types'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
-
-
-
 export class News extends Component {
     static defaultProps = {
         country: 'in',
@@ -51,6 +48,8 @@ export class News extends Component {
     }
 
     async componentDidMount() {
+        console.log('News mounted')
+
         this.updateNews()
     }
 
@@ -87,7 +86,7 @@ export class News extends Component {
                     hasMore={this.state.hasMore}
                     loader={<Spinner />}>
                     <div className="container">
-                    <h1 style={{marginTop:'70px'}}>{`${this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} News - 🔥Top Headlines`}</h1>
+                        <h1 style={{ marginTop: '70px' }}>{`${this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} News - 🔥Top Headlines`}</h1>
                         <div className='row'>
                             {this.state.articles && this.state.articles.map((element) => {
                                 return <div className="col-md-4 mt-4 d-flex align-items-stretch" key={element.url}>
