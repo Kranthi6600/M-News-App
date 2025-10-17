@@ -1,0 +1,24 @@
+body {
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+
+.loading {
+  border: 5px solid rgb(255, 248, 248);
+  border-top: 3px solid rgb(82, 77, 77);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
