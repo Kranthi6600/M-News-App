@@ -48,9 +48,7 @@ export class News extends Component {
     }
 
     async componentDidMount() {
-        console.log('News mounted')
-
-        this.updateNews()
+       this.updateNews()
     }
 
     fetchMoreData = async () => {
